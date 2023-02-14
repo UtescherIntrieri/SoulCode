@@ -1,0 +1,121 @@
+body{
+    background-color: rgb(190, 187, 136);
+    color: white;
+    font: normal 18pt Arial;
+}
+h1{
+    color: rgb(255, 212, 22 );
+}
+ul {
+    list-style-type: none;
+    margin-bottom: 8px;
+    padding: 0 16px 0 16px;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 25px;               
+}     
+li{
+float: right;
+}  
+li a{
+    display: block;
+    color: white;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: #111;
+}
+.center{
+    display: inline-block;
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+}
+.mySlides{
+    display: none;
+    
+    
+}
+img{
+    vertical-align: middle;
+    
+}
+.slideshow-container{
+    max-width: 40%;
+    position: relative;
+    margin: 0;
+    padding: 14px 16px;
+    background-color: #333;
+    border-radius: 25px;
+    
+}
+.products-container{
+    display: inline;
+    max-width: 40%;
+    position: relative;
+    float: right;
+    margin: 0;
+    padding: 14px 16px;
+    background-color: #333;
+    border-radius: 25px;
+    
+}
+.dot{
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active{
+    background-color: #717171;
+    
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+    
+}
+@keyframes fade{
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+.headline{
+    text-align: center;
+    margin: 12px;
+    margin-bottom: 0px;
+}
+.fa{
+    text-decoration: none;
+    font-size: 20px;
+    color:white
+}
+footer{
+    padding: 30px 16px;
+    margin-top: 160px;
+    background-color: #333;
+    color: white;
+    font-size:small;
+    border-radius: 25px;
+}
+footer p{
+    margin: 0;
+    display: block;
+}
+footer a{
+    margin: 0 10px;
+  color: black;
+}
+.footerleft{
+    width: 49%;
+    float: left;
+    display:inline;
+}   
+.footerright{
+    float: right;
+    display:inline;
+}
