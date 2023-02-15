@@ -8,7 +8,6 @@ var nota1 = 8
 var nota2 = 7
 var nota3 = 6
 media = ((nota1+nota2+nota3)/3).toFixed(2)
-//console.log(media)
 if(media >= 5 && media < 7){
     console.log(`Sua média é ${media}. Você está de reforço`)
 }
@@ -29,7 +28,6 @@ console.log("\n")
 var peso = 73.4
 var altura = 1.83
 imc = (peso / (altura*altura)).toFixed(2)
-//console.log(`Seu imc é ${imc}`)
 if(imc >= 0 && imc < 18.5){
     console.log(`Seu imc é ${imc}. Você está abaixo do peso`)
 }
