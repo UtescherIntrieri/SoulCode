@@ -37,6 +37,20 @@ ul{
     right: 8px;
     z-index: 2;             
 }
+ul input[type=text]{
+    float: right;
+    padding: 11px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    width: 400px;
+    border-radius: 25px;
+}
+ul input:focus, textarea:focus, select:focus{
+    outline: none;
+
+}
 .dropdown{
     float: right;
     overflow: hidden;
