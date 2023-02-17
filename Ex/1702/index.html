@@ -1,0 +1,134 @@
+<!-- Atividade Prática de HTML: Criando uma Página de Contato
+Nesta atividade prática de HTML, iremos criar uma página de contato com títulos, parágrafos, lista, tabela e formulário.
+Objetivo: Criar uma página de contato com uma lista de informações da empresa, formulário de contato e uma tabela com informações de contato. Siga o modelo em anexo. -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+	<title>Soulcode</title>
+</head>
+<body>
+
+	<header>
+		<h1>Soulcode</h1>
+		<nav>
+			<!-- Adicione aqui o sua lista -->
+            <ul>
+                <li>Nossos Bootcamps</li> <br>
+                <li>
+                        ENGENHARIA DE DADOS <br>
+                        DURAÇÃO: 12 SEMANAS <br>
+                        INSCRIÇÕES ATÉ 16/05/23 <br>
+                        INÍCIO EM 30/05/23
+                </li><br>
+                <li>
+                    ANALISTA DE DADOS <br>
+                    DURAÇÃO: 12 SEMANAS <br>
+                    INSCRIÇÕES ATÉ 06/02/23 <br>
+                    INÍCIO EM 13/02/23
+                </li><br>
+                <li>
+                    SERVICENOW
+                    DURAÇÃO: 12 SEMANAS <br>
+                    INSCRIÇÕES ATÉ 13/02/23 <br>
+                    INÍCIO EM 27/02/23
+                </li><br>
+                <li>
+                    DESENVOLVEDOR REACT NODE.JS FULL STACK
+                    DURAÇÃO: 12 SEMANAS <br>
+                    INSCRIÇÕES ATÉ 23/01/23 <br>
+                    INÍCIO EM 13/02/23
+                </li><br>
+                <li>
+                    ANALISTA DE MIDIA E PERFORMANCE
+                    DURAÇÃO: 12 SEMANAS <br>
+                    INSCRIÇÕES ATÉ 20/03/23 <br>
+                    INÍCIO EM 03/04/23
+                </li><br>
+                <li>
+                    DESENVOLVEDOR SALESFORCE
+                    DURAÇÃO: 12 SEMANAS <br>
+                    INSCRIÇÕES ATÉ 06/02/23 <br>
+                    INÍCIO EM 13/02/23
+                </li><br>
+
+            </ul>
+		</nav>
+	</header>
+
+	<main>
+		<section>
+			<h2>Contato</h2>
+
+			<p>Entre em contato conosco através do formulário abaixo ou pelos meios de contato listados na tabela.</p>
+
+			<!-- Adicione aqui o seu formulário -->
+            <form>
+
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+        
+                    <label for="cNome">Nome:</label>
+                    <input required type="text" id="cNome" name="nome" placeholder="Digite seu nome aqui" minlength="1" maxlength="70" size="40"> <br>
+                    
+                    <label for="cEmail">E-mail:</label>
+                    <input required type="email" id="cEmail" name="email" placeholder="Digite seu e-mail aqui" value=""> <br>
+                    
+                    <label for="cTelefone">Telefone:</label>
+                    <input required type="tel" id="cTelefone" name="telefone" placeholder="(xx) xxxxxx xxxx)" value=""> <br>
+                                                            
+                    <label for="cDataNasc">Data de Nascimento:</label>
+                    <input type="date" min="2000-01-01" max="2023-02-16" id="cDataNasc" name="dataNasc"> <br>
+                                        
+                    <label>Sexo:</label>
+                    <input id="cSexoMasc" type="radio" name="sexo">
+                    <label for="cSexoMasc">Masculino</label>
+                    <input id="cSexoFem" type="radio" name="sexo">
+                    <label for="cSexoFem">Feminino</label>
+
+                    <br>
+                    <textarea required rows="4" cols="40" placeholder="Digite um texto" id="cTexto" name="texto">
+                        Sua mensagem
+                    </textarea> <br>
+                    <button type="submit">Enviar</button>
+                </fieldset>                
+            </form>
+
+		</section>
+
+		<section>
+			<h2>Informações de Contato</h2>
+
+			<!-- Adicione aqui a sua tabela -->
+            <table border="1">
+                <colgroup>
+                    <col style="width: 150px">
+                    <col style="width: 250px">
+                    <col style="width: 0px">
+                    <col style="width: 0px">
+                </colgroup>
+                <tr>
+                    <td>Whatsapp</td>
+                    <td>(xx)xxxxx-xxxx</td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td>soulcode@soul.com.br</td>
+                </tr>
+                <tr>
+                    <td>Endereço</td>
+                    <td>Alameda Santos, 1165 - São Paulo</td>
+                </tr>
+             </table>
+
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Minha Empresa. Todos os direitos reservados.</p>
+	</footer>
+
+</body>
+</html>
