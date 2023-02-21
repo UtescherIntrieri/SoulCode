@@ -109,8 +109,7 @@ regra para aplicar ajustes salariais: Caso não possua dependentes não
 realizar ajustes no salário, se houver entre 1 e 5 aumentar em 30% o
 salário. Caso seja acima de 5 aumentar em 40% o salário.
 */
-var salario = 123
-var quantidadeDependentes = 6
+var salario = 123, quantidadeDependentes = 6
 if(quantidadeDependentes==0){
     console.log(`Não houve reajuste no salário de ${salario.toFixed(2)}`)
 } else if(quantidadeDependentes>=1 && quantidadeDependentes<=5){
@@ -161,7 +160,18 @@ console.log("\n")
 1. Defina uma variável para armazenar um caractere e determine se é uma
 vogal ou uma consoante. Use um switch-case para implementar a lógica.
 */
-
+var letra = "a"
+switch(letra){
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+        console.log("Vogal");
+    break
+    default:
+        console.log("Consoante");
+}
 
 console.log("\n")
 /*
@@ -169,7 +179,45 @@ console.log("\n")
 prima o nome do mês correspondente. Use um switch-case para imple-
 mentar a lógica.
 */
-
+var mes = 6
+switch(mes){
+    case 1:
+        console.log("Janeiro");
+    break
+    case 2:
+        console.log("Fevereiro");
+    break    
+    case 3:
+        console.log("Março");
+    break    
+    case 4:
+        console.log("Abril");
+    break    
+    case 5:
+        console.log("Maio");
+    break    
+    case 6:
+        console.log("Junho");
+    break    
+    case 7:
+        console.log("Julho");
+    break    
+    case 8:
+        console.log("Agosto");
+    break    
+    case 9:
+        console.log("Setembro");
+    break    
+    case 10:
+        console.log("Outubro");
+    break    
+    case 11:
+        console.log("Novembro");
+    break    
+    case 12:
+        console.log("Dezembro");
+    break    
+}
 
 console.log("\n")
 /*
@@ -177,11 +225,55 @@ console.log("\n")
 o número de dias correspondente ao mês. Use um switch-case para
 implementar a lógica. Considere que fevereiro tem 28 dias em anos não
 bissextos.
+*/
+var mes = 2
+switch(mes){
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        console.log("31 dias");
+    break
+    case 2:
+        console.log("28 dias");
+    break    
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        console.log("30 dias");
+    break
+    default:
+        console.log("Mês Inválido");    
+}
+
+
+console.log("\n")
+/*
 4. Defina uma variável para armazenar um número de 1 a 4 e imprima o
 nome da estação do ano correspondente. Use um switch-case para im-
 plementar a lógica.
 */
-
+var estacao = 1
+switch(estacao){
+    case 1:
+        console.log("Outono");
+    break
+    case 2:
+        console.log("Inverno");
+    break
+    case 3:
+        console.log("Primavera");
+    break
+    case 4:
+        console.log("Verão");
+    break
+    default:
+        console.log("Estação Inválida");
+}
 
 console.log("\n")
 /*
@@ -190,7 +282,28 @@ menção correspondente. Use um switch-case para implementar a ló-
 gica. Considere as seguintes faixas de notas: de 0 a 4 - Insuficiente, de
 5 a 6 - Regular, de 7 a 8 - Bom, de 9 a 10 - Excelente.
 */
-
+var nota = 10
+switch(nota){
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+        console.log("Insuficiente");
+    break
+    case 5:
+    case 6:
+        console.log("Regular");
+    break
+    case 7:
+    case 8:
+        console.log("Bom");
+    break
+    case 9:
+    case 10:
+        console.log("Excelente");
+    break
+}
 
 console.log("\n")
 /*
@@ -200,20 +313,37 @@ console.log("\n")
 1. Use um laço while para imprimir na tela todos os números pares de 2 a
 10.
 */
-
+var num = 2
+while (num<=10){
+    if(num%2==0){
+        console.log(num);
+        num++
+    } else{
+        num++
+    }
+}
 
 console.log("\n")
 /*
 2. Use um laço for para imprimir na tela a tabuada do 7 (de 1 a 10).
 */
-
+for(var tab = 1; tab<=10; tab++){
+    res = 7 * tab
+    console.log(`7 * ${tab} = ${res}`);
+}
 
 console.log("\n")
 /*
 3. Use um laço for para imprimir na tela a sequência de Fibonacci até o
 décimo termo.
 */
-
+var a = 0, b = 1, c, i;
+    for(i = 1; i <= 10; i++){
+    c = a + b;
+    a = b;
+    b = c;
+    console.log(a);
+    }
 
 console.log("\n")
 /*
@@ -224,20 +354,34 @@ console.log("\n")
 ****
 *****
 */
-
+var ast = "*"
+for(var i = 1; i<=5; i++){
+    console.log(ast);
+    ast+= "*"
+}
 
 console.log("\n")
 /*
 5. Escreva um programa que use um laço for para imprimir na tela os nú-
 meros de 10 a 1 (em ordem decrescente).
 */
-
+for(var i = 10; i>=1; i--){
+    console.log(i);
+}
 
 console.log("\n")
 /*
 6. Mostre apenas os números ímpares de 1 até 1000.
 */
-
+var num = 0
+while (num<=1000){
+    if(num%2!=0){
+        console.log(num);
+        num++
+    } else{
+        num++
+    }
+}
 
 console.log("\n")
 /*
