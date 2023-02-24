@@ -50,3 +50,19 @@ function converter(f) {
   }
 } 
 converter(0)
+
+// Exercício III: Transforme as funções abaixo em arrow
+// function criarNomeCompleto(nome, sobrenome) {
+//   return nome + " " + sobrenome;
+// }
+// function contar(maximo) {
+//   for (let i = 1; i <= maximo; i++) {
+//     console.log(i);
+//   }
+// }
+// function imc(peso, altura) {
+//   let calculo = peso / (altura * altura);
+//   console.log(`O IMC é ${calculo}`);
+
+//   return calculo;
+// }
