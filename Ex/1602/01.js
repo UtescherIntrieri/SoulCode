@@ -6,11 +6,11 @@
 var idade = 19
 var dinheiro = 50
 if(idade>=18 && dinheiro>=20){
-    dinheiro -= 20
-    console.log(`Pode comprar bebida, vc tem R$${dinheiro} sobrando`)
+  dinheiro -= 20
+  console.log(`Pode comprar bebida, vc tem R$${dinheiro} sobrando`)
 }
 else{
-    console.log("Não pode comprar bebida")
+  console.log("Não pode comprar bebida")
 }
 console.log("\n")
 
@@ -21,13 +21,13 @@ console.log("\n")
 // Mostre ao fim o salário ajustado.
 var sal = 5000
 if(sal<500){
-    sal +=500
-    console.log(`Seu salário é de R$${sal}`)
+  sal +=500
+  console.log(`Seu salário é de R$${sal}`)
 } else if(sal>=500 && sal<=1000){
-    sal +=25
-    console.log(`Seu salário é de R$${sal}`)
+  sal +=25
+  console.log(`Seu salário é de R$${sal}`)
 } else{
-    console.log("Não houve mudança de salário")
+  console.log("Não houve mudança de salário")
 }
 console.log("\n")
 
@@ -35,29 +35,29 @@ console.log("\n")
 // 1 - domingo, 2 - segunda, 3 - terça, ... (SWITCH)
 var dia = 3
 switch(dia){
-    case 1:
-        console.log("Domingo")
-    break
-    case 2:
-        console.log("Segunda")
-    break
-    case 3:
-        console.log("Terça")
-    break
-    case 4:
-        console.log("Quarta")
-    break 
-    case 5:
-        console.log("Quinta")
-    break 
-    case 6:
-        console.log("Sexta")
-    break 
-    case 7:
-        console.log("Sábado")
-    break
-    default:
-        console.log("Dia inválido")        
+  case 1:
+    console.log("Domingo")
+  break
+  case 2:
+    console.log("Segunda")
+  break
+  case 3:
+    console.log("Terça")
+  break
+  case 4:
+    console.log("Quarta")
+  break 
+  case 5:
+    console.log("Quinta")
+  break 
+  case 6:
+    console.log("Sexta")
+  break 
+  case 7:
+    console.log("Sábado")
+  break
+  default:
+    console.log("Dia inválido")        
 }
 console.log("\n")
 
@@ -76,17 +76,17 @@ console.log("\n")
 // }
 var comida = "batata"
 switch(comida){
-    case "batata":
-    case "carne":
-    case "cebola":
-        console.log("Humm, adoro")
-    break
-    case "pizza":
-    case "sanduiche":
-        console.log("As vezes")
-    break
-    default:
-        console.log("Quero não!")
+  case "batata":
+  case "carne":
+  case "cebola":
+    console.log("Humm, adoro")
+  break
+  case "pizza":
+  case "sanduiche":
+    console.log("As vezes")
+  break
+  default:
+    console.log("Quero não!")
 }
 
 console.log("\n")
@@ -94,7 +94,7 @@ console.log("\n")
 // Par é um número que é divisível por 2.
 var num = 134
 if(num%2==0){
-    console.log("é par")
+  console.log("é par")
 } else{
-    console.log("é impar")
+  console.log("é impar")
 }

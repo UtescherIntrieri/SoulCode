@@ -66,13 +66,13 @@ var a = 2
 var b = 3
 var c = 1
 if(a>b && a>c){
-    console.log("a é maior")
+  console.log("a é maior")
 } else if(b>a && b>c){
-    console.log("b é maior")
+  console.log("b é maior")
 }else if(c>a && c>b){
-    console.log("c é maior")
+  console.log("c é maior")
 }else{
-    console.log("Números devem ser diferentes")
+  console.log("Números devem ser diferentes")
 }
 
 console.log("\n")
@@ -85,9 +85,9 @@ var l1 = 3
 var l2 = 4
 var l3 = 5
 if(l1+l2<l3 || l1+l3<l2 || l2+l3<l1){
-    console.log("Não é possível")
+  console.log("Não é possível")
 } else{
-    console.log("É possível")
+  console.log("É possível")
 }
 
 console.log("\n")
@@ -97,9 +97,9 @@ que 130) mostre uma mensagem de aviso.
 */
 var idade = 20
 if(idade<0 || idade>130){
-    console.log("Idade inválida")
+  console.log("Idade inválida")
 } else{
-    console.log(`Você tem ${idade} anos`)
+  console.log(`Você tem ${idade} anos`)
 }
 
 console.log("\n")
@@ -111,13 +111,13 @@ salário. Caso seja acima de 5 aumentar em 40% o salário.
 */
 var salario = 123, quantidadeDependentes = 6
 if(quantidadeDependentes==0){
-    console.log(`Não houve reajuste no salário de ${salario.toFixed(2)}`)
+  console.log(`Não houve reajuste no salário de ${salario.toFixed(2)}`)
 } else if(quantidadeDependentes>=1 && quantidadeDependentes<=5){
-    salario = salario *1.3
-    console.log(`Seu salário é de ${salario.toFixed(2)}`)
+  salario = salario *1.3
+  console.log(`Seu salário é de ${salario.toFixed(2)}`)
 }else if(quantidadeDependentes>5){
-    salario = salario *1.4
-    console.log(`Seu salário é de ${salario.toFixed(2)}`)
+  salario = salario *1.4
+  console.log(`Seu salário é de ${salario.toFixed(2)}`)
 }
 
 console.log("\n")
@@ -128,11 +128,11 @@ ou dia de útil.
 */
 var dia = 2
 if(dia>=2 && dia<=6){
-    console.log("É dia de semana")
+  console.log("É dia de semana")
 } else if(dia==1 || dia==7){
-    console.log("É fim de semana")
+  console.log("É fim de semana")
 } else{
-    console.log("Dia inválido")
+  console.log("Dia inválido")
 }
 
 console.log("\n")
@@ -143,13 +143,13 @@ por 100. Caso 2) É um número divisível por 4, por 100 e por 400.
 */
 var ano = 2023
 if(ano<=0){
-    console.log("Ano inválido")
+  console.log("Ano inválido")
 } else if(ano%4==0 && ano%100!=0){
-    console.log(`${ano} é bissexto`)
+  console.log(`${ano} é bissexto`)
 } else if(ano%4==0 && ano%100==0 && ano%400==0){
-    console.log(`${ano} é bissexto`)
+  console.log(`${ano} é bissexto`)
 } else{
-    console.log(`${ano} não é bissexto`)
+  console.log(`${ano} não é bissexto`)
 }
 
 console.log("\n")
@@ -162,15 +162,15 @@ vogal ou uma consoante. Use um switch-case para implementar a lógica.
 */
 var letra = "a"
 switch(letra){
-    case "a":
-    case "e":
-    case "i":
-    case "o":
-    case "u":
-        console.log("Vogal");
-    break
-    default:
-        console.log("Consoante");
+  case "a":
+  case "e":
+  case "i":
+  case "o":
+  case "u":
+    console.log("Vogal");
+  break
+  default:
+    console.log("Consoante");
 }
 
 console.log("\n")
@@ -181,42 +181,42 @@ mentar a lógica.
 */
 var mes = 6
 switch(mes){
-    case 1:
-        console.log("Janeiro");
-    break
-    case 2:
-        console.log("Fevereiro");
-    break    
-    case 3:
-        console.log("Março");
-    break    
-    case 4:
-        console.log("Abril");
-    break    
-    case 5:
-        console.log("Maio");
-    break    
-    case 6:
-        console.log("Junho");
-    break    
-    case 7:
-        console.log("Julho");
-    break    
-    case 8:
-        console.log("Agosto");
-    break    
-    case 9:
-        console.log("Setembro");
-    break    
-    case 10:
-        console.log("Outubro");
-    break    
-    case 11:
-        console.log("Novembro");
-    break    
-    case 12:
-        console.log("Dezembro");
-    break    
+  case 1:
+    console.log("Janeiro");
+  break
+  case 2:
+    console.log("Fevereiro");
+  break    
+  case 3:
+    console.log("Março");
+  break    
+  case 4:
+    console.log("Abril");
+  break    
+  case 5:
+    console.log("Maio");
+  break    
+  case 6:
+    console.log("Junho");
+  break    
+  case 7:
+    console.log("Julho");
+  break    
+  case 8:
+    console.log("Agosto");
+  break    
+  case 9:
+    console.log("Setembro");
+  break    
+  case 10:
+    console.log("Outubro");
+  break    
+  case 11:
+    console.log("Novembro");
+  break    
+  case 12:
+    console.log("Dezembro");
+  break    
 }
 
 console.log("\n")
@@ -228,26 +228,26 @@ bissextos.
 */
 var mes = 2
 switch(mes){
-    case 1:
-    case 3:
-    case 5:
-    case 7:
-    case 8:
-    case 10:
-    case 12:
-        console.log("31 dias");
-    break
-    case 2:
-        console.log("28 dias");
-    break    
-    case 4:
-    case 6:
-    case 9:
-    case 11:
-        console.log("30 dias");
-    break
-    default:
-        console.log("Mês Inválido");    
+  case 1:
+  case 3:
+  case 5:
+  case 7:
+  case 8:
+  case 10:
+  case 12:
+    console.log("31 dias");
+  break
+  case 2:
+    console.log("28 dias");
+  break    
+  case 4:
+  case 6:
+  case 9:
+  case 11:
+    console.log("30 dias");
+  break
+  default:
+    console.log("Mês Inválido");    
 }
 
 
@@ -259,20 +259,20 @@ plementar a lógica.
 */
 var estacao = 1
 switch(estacao){
-    case 1:
-        console.log("Outono");
-    break
-    case 2:
-        console.log("Inverno");
-    break
-    case 3:
-        console.log("Primavera");
-    break
-    case 4:
-        console.log("Verão");
-    break
-    default:
-        console.log("Estação Inválida");
+  case 1:
+    console.log("Outono");
+  break
+  case 2:
+    console.log("Inverno");
+  break
+  case 3:
+    console.log("Primavera");
+  break
+  case 4:
+    console.log("Verão");
+  break
+  default:
+    console.log("Estação Inválida");
 }
 
 console.log("\n")
@@ -284,25 +284,25 @@ gica. Considere as seguintes faixas de notas: de 0 a 4 - Insuficiente, de
 */
 var nota = 10
 switch(nota){
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-        console.log("Insuficiente");
-    break
-    case 5:
-    case 6:
-        console.log("Regular");
-    break
-    case 7:
-    case 8:
-        console.log("Bom");
-    break
-    case 9:
-    case 10:
-        console.log("Excelente");
-    break
+  case 0:
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+    console.log("Insuficiente");
+  break
+  case 5:
+  case 6:
+    console.log("Regular");
+  break
+  case 7:
+  case 8:
+    console.log("Bom");
+  break
+  case 9:
+  case 10:
+    console.log("Excelente");
+  break
 }
 
 console.log("\n")
@@ -315,12 +315,12 @@ console.log("\n")
 */
 var num = 2
 while (num<=10){
-    if(num%2==0){
-        console.log(num);
-        num++
-    } else{
-        num++
-    }
+  if(num%2==0){
+    console.log(num);
+    num++
+  } else{
+    num++
+  }
 }
 
 console.log("\n")
@@ -328,8 +328,8 @@ console.log("\n")
 2. Use um laço for para imprimir na tela a tabuada do 7 (de 1 a 10).
 */
 for(var tab = 1; tab<=10; tab++){
-    res = 7 * tab
-    console.log(`7 * ${tab} = ${res}`);
+  res = 7 * tab
+  console.log(`7 * ${tab} = ${res}`);
 }
 
 console.log("\n")
@@ -338,12 +338,12 @@ console.log("\n")
 décimo termo.
 */
 var a = 0, b = 1, c, i;
-    for(i = 1; i <= 10; i++){
-    c = a + b;
-    a = b;
-    b = c;
-    console.log(a);
-    }
+for(i = 1; i <= 10; i++){
+  c = a + b;
+  a = b;
+  b = c;
+  console.log(a);
+}
 
 console.log("\n")
 /*
@@ -356,8 +356,8 @@ console.log("\n")
 */
 var ast = "*"
 for(var i = 1; i<=5; i++){
-    console.log(ast);
-    ast+= "*"
+  console.log(ast);
+  ast+= "*"
 }
 
 console.log("\n")
@@ -366,7 +366,7 @@ console.log("\n")
 meros de 10 a 1 (em ordem decrescente).
 */
 for(var i = 10; i>=1; i--){
-    console.log(i);
+  console.log(i);
 }
 
 console.log("\n")
@@ -375,12 +375,12 @@ console.log("\n")
 */
 var num = 0
 while (num<=1000){
-    if(num%2!=0){
-        console.log(num);
-        num++
-    } else{
-        num++
-    }
+  if(num%2!=0){
+    console.log(num);
+    num++
+  } else{
+    num++
+  }
 }
 
 console.log("\n")

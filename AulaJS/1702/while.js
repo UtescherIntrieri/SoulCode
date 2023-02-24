@@ -4,29 +4,28 @@
 // Condição de parada, valor inicial, atualizacao
 
 // While = Enquanto
-/*
-    while(condicao) {
-        // código a se repetir
-    }
-*/
 
-/*
-// Loop infinito 
-let numero = 1;
+// while(condicao) {
+//  código a se repetir
+// }
 
-while(true) { // loop infinito
-    console.log(numero);
-}
-*/
 
-/*
-let numero = 1;
+//
+// // Loop infinito 
+// let numero = 1;
 
-while(true) { // condição de parada
-    console.log(numero);
-    numero++;
-}
-*/
+// while(true) { // loop infinito
+//   console.log(numero);
+// }
+//
+
+// let numero = 1;
+
+// while(true) { // condição de parada
+//   console.log(numero);
+//   numero++;
+// }
+//
 
 // Loop com parada e atualização
 let numero = 1;

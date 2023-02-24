@@ -9,16 +9,16 @@ var nota2 = 7
 var nota3 = 6
 media = ((nota1+nota2+nota3)/3).toFixed(2)
 if(media >= 5 && media < 7){
-    console.log(`Sua média é ${media}. Você está de reforço`)
+  console.log(`Sua média é ${media}. Você está de reforço`)
 }
 else if(media >= 7 && media <= 10){
-    console.log(`Sua média é ${media}. Aprovado`)
+  console.log(`Sua média é ${media}. Aprovado`)
 }
 else if(media >= 0 && media < 5){
-    console.log(`Sua média é ${media}. Reprovado`)
+  console.log(`Sua média é ${media}. Reprovado`)
 }
 else{
-    console.log("Notas inválidas")
+  console.log("Notas inválidas")
 }
 console.log("\n")
 
@@ -29,25 +29,25 @@ var peso = 73.4
 var altura = 1.83
 imc = (peso / (altura*altura)).toFixed(2)
 if(imc >= 0 && imc < 18.5){
-    console.log(`Seu imc é ${imc}. Você está abaixo do peso`)
+  console.log(`Seu imc é ${imc}. Você está abaixo do peso`)
 }
 else if(imc >= 18.5 && imc < 25){
-    console.log(`Seu imc é ${imc}. Você está com peso normal`)
+  console.log(`Seu imc é ${imc}. Você está com peso normal`)
 }
 else if(imc >= 25 && imc < 30){
-    console.log(`Seu imc é ${imc}. Você está com sobrepeso`)
+  console.log(`Seu imc é ${imc}. Você está com sobrepeso`)
 }
 else if(imc >= 30 && imc < 35){
-    console.log(`Seu imc é ${imc}. Você está com obesidade grau I`)
+  console.log(`Seu imc é ${imc}. Você está com obesidade grau I`)
 }
 else if(imc >= 35 && imc < 40){
-    console.log(`Seu imc é ${imc}. Você está com obesidade grau II`)
+  console.log(`Seu imc é ${imc}. Você está com obesidade grau II`)
 }
 else if(imc >= 40){
-    console.log(`Seu imc é ${imc}. Você está com obesidade grau III`)
+  console.log(`Seu imc é ${imc}. Você está com obesidade grau III`)
 }
 else{
-    console.log("IMC inválido")
+  console.log("IMC inválido")
 }
 console.log("\n")
 
@@ -56,11 +56,11 @@ console.log("\n")
 var a = 3
 var b = 3
 if(a > b){
-    console.log("A é maior que B")
+  console.log("A é maior que B")
 }
 else if(a < b){
-    console.log("B é maior que A")
+  console.log("B é maior que A")
 }
 else{
-    console.log("A é igual a B")
+  console.log("A é igual a B")
 }

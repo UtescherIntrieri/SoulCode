@@ -1,15 +1,15 @@
 // Estrutura de Repetição: For
 
 /*
-    for(inicializacao; condicao; atualizacao) {
-   // Exercício I: Faça a tabuada do 5
+for(inicializacao; condicao; atualizacao) {
+// Exercício I: Faça a tabuada do 5
 // 1 x 5 = 5
 // 2 X 5 = 10
 // ...
 // 10 x 5 = 50
 // Exercícios II: Vá do 1 até o 99 e mostre apenas os valores ímpares. (IF dentro do WHILE)
 // Exercícios III: Conte de 50 até 75     // o código a se repetir
-    }
+}
 */
 
 // 1 até 5

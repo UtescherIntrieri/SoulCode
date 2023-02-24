@@ -5,9 +5,9 @@ let ligado = true;
 let desligado = !ligado;
 
 /* 
-    Tabela (NOT)
-    !true = false
-    !false = true
+Tabela (NOT)
+!true = false
+!false = true
 */
 
 // Operador AND(&&) = Todas as expressões tem que ser true
@@ -18,22 +18,22 @@ let podeViajar = ligado && !naReserva;
 let ficaEmCasa = !podeViajar;
 
 /*
-    Tabela Verdade (E)
-    true && true = true
-    true && false = false
-    false && true = false
-    false && false = false
+Tabela Verdade (E)
+true && true = true
+true && false = false
+false && true = false
+false && false = false
 */
 
 // Operador OR(||) = Basta uma expressão ser true
 let taPodendo = podeViajar || podeAbastecer;
 
 /* 
-    Tabela Verdade (OU)
-    true || true = true
-    true || false = true
-    false || true = true
-    false || false = false
+Tabela Verdade (OU)
+true || true = true
+true || false = true
+false || true = true
+false || false = false
 */
 
 let idade = 100;
@@ -62,11 +62,9 @@ let expressao4 = !(x === 5); // false = !true
 
 // Estruturas condicionais (IF-ELSE)
 
-/*
-    if(condicao) {
-        // Faz algo se a condição for verdadeira
-    }
-*/
+// if(condicao) {
+//   // Faz algo se a condição for verdadeira
+// }
 
 let idadeUsuario = 17;
 
