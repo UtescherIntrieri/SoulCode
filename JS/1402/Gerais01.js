@@ -387,7 +387,7 @@ console.log("\n")
 /*
 
 
-2 Resoluções
+Resoluções
 2.1 Variáveis e operadores
 1. let fTemp = 108.0;
 let cTemp = (fTemp - 32) / 1.8;

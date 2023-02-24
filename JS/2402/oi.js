@@ -49,20 +49,38 @@ function converter(f) {
     }
   }
 } 
-converter(0)
+converter(0);
+console.log("\n");
 
 // Exercício III: Transforme as funções abaixo em arrow
 // function criarNomeCompleto(nome, sobrenome) {
 //   return nome + " " + sobrenome;
 // }
+var fnome = (nome, sobrenome) => nome+" "+sobrenome
+console.log(fnome("Nai", "Abreu"))
+console.log("\n");
 // function contar(maximo) {
 //   for (let i = 1; i <= maximo; i++) {
 //     console.log(i);
 //   }
 // }
+var contar = (maximo) =>{
+  for (let i = 1; i <= maximo; i++){
+    console.log(i);
+  }
+}
+contar(4)
+console.log("\n")
+
 // function imc(peso, altura) {
 //   let calculo = peso / (altura * altura);
 //   console.log(`O IMC é ${calculo}`);
 
 //   return calculo;
 // }
+const imc = (peso, altura) => {
+  let calculo = peso / (altura * altura);
+  console.log(`O IMC é ${calculo.toFixed(2)}`);
+  return calculo;
+}
+imc(73,1.8)
