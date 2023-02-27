@@ -1,43 +1,132 @@
 // 1.5 Funções
 // 1. Escreva uma função que receba um número e retorne seu dobro.
+function dobro(n1) {
+  return n1*2
+}
+console.log(dobro(4));
+console.log("\n");
 // 2. Escreva uma função que receba um número e retorne seu quadrado.
+function quadrado(n2) {
+  return n2*n2
+}
+console.log(quadrado(4));
+console.log("\n");
 // 3. Escreva uma função que receba nome, idade, endereço e retorne uma
 // mensagem no formato: "Olá, eu sou X, tenho X ano(s) e moro em X". Faça
 // uso da interpolação de strings.
+function cadastro(nome1,idade1,endereco) {
+  return `Olá, eu sou ${nome1}, tenho ${idade1} ano(s) e moro em ${endereco}`
+}
+console.log(cadastro("Nai","23","peruibe"));
+console.log("\n");
 // 4. Escreva uma função que receba dia, mês e ano e retorne a data por
 // extenso no formato "DD/MM/AAAA".
-
+function data(dia1,mes1,ano1) {
+  if (dia1<10) {
+    dia1 = `0${dia1}`
+  }
+  if (mes1<10) {
+    mes1 = `0${mes1}`
+  }
+  return `${dia1}/${mes1}/${ano1}`
+}
+console.log(data(5,7,2023));
+console.log("\n");
 // 5. Escreva uma função que receba um preço de um produto e um percen-
 // tual. Retorne o valor aplicado ao desconto.
-
+function desconto(v1,d1) {
+  return v1 - (v1 *(d1/100))
+}
+console.log(desconto(100,20));
+console.log("\n");
 // 6. Escreva uma função que receba uma palavra e um número. Retorne a
-
 // palavra repetida a quantidade de vezes indicada pelo segundo parâme-
 // tro. Exemplo: repetir("batata", 3) -> "batatabatatabatata". OBS: Utilize
-
+function palavra(p1,n3) {
+  for (let index = 0; index < n3; index++) {
+    console.log(p1);
+  }
+}
+palavra("oi",3);
+console.log("\n");
 // um loop para resolver.
 // 7. Escreva uma função que recebe outra função e invoca ela.
+function invocar() {
+  function abc(x) {
+  }
+  abc(2)
+}
 // 8. Transforme os itens 1, 2 e 3 em arrow function expressions.
+var mult = (n4) => n4*2;
+console.log(mult(4));
+console.log("\n");
+
+var quad = (n4) => n4*n4;
+console.log(quad(4));
+console.log("\n");
+
+var cad = (nome1,idade1,endereco) => `Olá, eu sou ${nome1}, tenho ${idade1} ano(s) e moro em ${endereco}`;
+console.log(cad("Nai",23,"Peruibe"));
+console.log("\n");
+
 // 1.6 Strings
 
 // 1. Escreva uma função que receba uma string e retorne o número de ca-
 // racteres contidos nela.
+function comp(s1) {
+  return s1.length
+}
+console.log(comp("Nai"));
+console.log("\n");
 
 // 2. Escreva uma função que receba uma string e retorne a mesma string em
 // letras maiúsculas.
+function maius(s2) {
+  return s2.toUpperCase()
+}
+console.log(maius("Nai"));
+console.log("\n");
 // 3. Escreva uma função que receba uma string e retorne a mesma string em
 // letras minúsculas.
+function minus(s3) {
+  return s3.toLowerCase()
+}
+console.log(minus("Nai"));
+console.log("\n");
 // 4. Escreva uma função que receba duas strings e retorne true se elas forem
 // iguais ou false caso contrário.
+function comp(s4,s5) {
+  if (s4 == s5) {
+    return true
+  } else {
+    return false    
+  }
+}
+console.log(comp("oi","oi"));
+console.log("\n");
 // 5. Escreva uma função que receba uma string e um número e retorne os
 // últimos caracteres da string de acordo com o número informado.
+function corte(s6,n5) {
+  return s6.slice(-n5)
+}
+console.log(corte("abcde", 3));
+console.log("\n");
 // 6. Escreva uma função que recebe uma frase e uma palavra. Retorne a frase
 // com as ocorrências da palavra censuradas/trocadas por ***. Exemplo:
 // censura("Eu jogo lol e valorant, mas lol é melhor", "lol") -> "Eu jogo ***
 // e valorant, mas *** é melhor". Dica: use a função replaceAll.
+function cens(s7,s8) {
+  return s7.replaceAll(s8, "***")
+}
+console.log(cens("oi, meu nome é nai e eu gosto muito de você", "nai"));
+console.log("\n");
 // 7. Escreva uma função que receba uma string e um caractere e retorne o
 // número de ocorrências desse caractere na string.
-
+function replace(s9,l1) {
+  return s9.split(l1).length - 1;
+}
+console.log(replace("oi, meu nome é nai e eu gosto muito de você", "e"));
+console.log("\n");
 
 
 
