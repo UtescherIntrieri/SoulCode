@@ -42,6 +42,7 @@ console.log("\n");
 // 6. Escreva uma função que receba uma palavra e um número. Retorne a
 // palavra repetida a quantidade de vezes indicada pelo segundo parâme-
 // tro. Exemplo: repetir("batata", 3) -> "batatabatatabatata". OBS: Utilize
+// um loop para resolver.
 function palavra(p1,n3) {
   for (let index = 0; index < n3; index++) {
     console.log(p1);
@@ -49,7 +50,6 @@ function palavra(p1,n3) {
 }
 palavra("oi",3);
 console.log("\n");
-// um loop para resolver.
 // 7. Escreva uma função que recebe outra função e invoca ela.
 function invocar() {
   function abc(x) {

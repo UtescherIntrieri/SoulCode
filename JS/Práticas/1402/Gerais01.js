@@ -317,10 +317,8 @@ var num = 2
 while (num<=10){
   if(num%2==0){
     console.log(num);
-    num++
-  } else{
-    num++
   }
+    num++
 }
 
 console.log("\n")
