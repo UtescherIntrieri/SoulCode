@@ -1,0 +1,105 @@
+<!-- Exercício: Aplicar estilizações na página empresa
+Limpar os campos após concatenar -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  </head>
+  <body class="overflow-hidden">
+    <div
+  class="bg-image bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+  style="
+    background-image: url('https://picsum.photos/1366/768');
+    height: 100vh;
+  "
+>
+<div class="d-flex justify-content-center">
+  <div class="card w-25 text-bg-dark border-4 border-dark rounded-5 mb-3" style="--bs-bg-opacity: .8;">
+    <div class="card-body">
+      <form id="myForm">
+        <h3>Registro de dados</h3>
+        <div>
+          <label for="email">Email</label><br />
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Exemplo@exemplo.com"
+            class="form-control border-4 border-dark"
+          />
+        </div>
+        <div>
+          <label for="cep">CEP</label><br />
+          <input 
+          id="cep" 
+          type="text" 
+          name="cep" 
+          placeholder="00000-000" 
+          class="form-control border-4 border-dark"
+          />
+        </div>
+        <div>
+          <label for="uf">UF</label><br />
+          <input
+            id="uf"
+            type="text"
+            name="uf"
+            placeholder="XX"
+            maxlength="2"
+            class="form-control border-4 border-dark"
+          />
+        </div>
+        <div>
+          <label for="localidade">Cidade</label><br />
+          <input
+            id="localidade"
+            type="text"
+            name="localidade"
+            placeholder="XXX XXXXX"
+            class="form-control border-4 border-dark"
+          />
+        </div>
+        <div>
+          <label for="telefone">Telefone</label><br />
+          <input
+            id="telefone"
+            type="text"
+            name="telefone"
+            placeholder="(00) 00000-0000"
+            class="form-control border-4 border-dark"
+          />
+        </div>
+        <br />
+        <button id="btn-add" type="button" class="btn btn-dark">Adicionar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-center">
+  <div class="card w-100 text-bg-dark border-4 border-dark rounded-5 mb-3" style="--bs-bg-opacity: .8;">
+    <div class="card-body">
+      <h3>Lista de dados</h3>
+      <div class="row justify-content-md-center">
+        <table>
+          <thead>
+            <tr class="col justify-content-evenly">
+              <th>Email</th>
+              <th>CEP</th>
+              <th>UF</th>
+              <th>Localidade</th>
+              <th>Telefone</th>
+            </tr>
+          </thead>
+          <tbody class="col justify-content-around" id="conteudo-tabela"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="./scripts/empresa.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>  </body>
+</html>

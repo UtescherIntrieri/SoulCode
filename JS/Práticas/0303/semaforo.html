@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semáforo</title>
+  </head>
+  <body>
+    <section>
+      <h1>Semáforo</h1>
+      <img
+        id="semaforo-img"
+        src="https://i.postimg.cc/MKS3MpWx/vermelho.png"
+        width="200"
+      />
+      <p id="semaforo-descricao">PARE!</p>
+      <button onclick="trocarVermelho()">Vermelho</button>
+      <!-- Evento inline -->
+      <button onclick="trocarAmarelo()">Amarelo</button>
+      <button onclick="trocarVerde()">Verde</button>
+    </section>
+    <!-- O semaforo.js consegue se comunicar com o html-->
+    <script src="./scripts/semaforo.js"></script>
+    <!-- <script> 
+        // aqui dentro aceita apenas JS
+        console.log("Executando dentro do HTML!");
+    </script> -->
+  </body>
+</html>
