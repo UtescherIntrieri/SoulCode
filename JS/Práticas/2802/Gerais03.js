@@ -81,7 +81,6 @@ console.log("\n");
 // quivo que forem dessa extensão.
 const arquivo = ["oioi.mp3","cansei.wav","haha.mp4", "chorei.mp3"]
 var extensao = "mp3"
-var s2
 let res4 = []
 arquivo.map((s1) => {
   if (s1.slice(-3) == extensao) {
@@ -92,7 +91,7 @@ console.log(res4);
 console.log("\n");
 // 8. Crie uma função que recebe um número, em seguida retorne um array
 // de números aleatórios com o tamanho especificado pelo número.
-res5 = []
+const res5 = []
 function random(n1) {
   for (let index = 0; index < n1; index++) {
     num = Math.floor(Math.random() * 100)
