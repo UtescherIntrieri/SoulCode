@@ -103,44 +103,24 @@
         <span class="fs-4 m-2">Nome</span>
       </a>
       <hr>
-      <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
-          <a href="#" class="nav-link active text-bg-success" aria-current="page">
-            <svg class="bi me-2" width="16" height="16">
-              <use xlink:href="#home"></use>
-            </svg>
-            Dados Pessoais
-          </a>
+      <ul class="nav nav-pills flex-column mb-auto" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link text-black" id="dadosPessoais-tab" data-bs-toggle="tab" data-bs-target="#dadosPessoais-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Dados Pessoais</button>
         </li>
         <li>
-          <a href="#" class="nav-link text-black">
-            <svg class="bi me-2" width="16" height="16">
-              <use xlink:href="#speedometer2"></use>
-            </svg>
-            Cartões
-          </a>
+          <button class="nav-link text-black" id="cartoes-tab" data-bs-toggle="tab" data-bs-target="#cartoes-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Cartões</button>
         </li>
         <li>
-          <a href="#" class="nav-link text-black">
-            <svg class="bi me-2" width="16" height="16">
-              <use xlink:href="#table"></use>
-            </svg>
-            Planos
-          </a>
+          <button class="nav-link text-black" id="planos-tab" data-bs-toggle="tab" data-bs-target="#planos-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Planos</button>
         </li>
         <li>
-          <a href="#" class="nav-link text-black">
-            <svg class="bi me-2" width="16" height="16">
-              <use xlink:href="#grid"></use>
-            </svg>
-            Segurança
-          </a>
+          <button class="nav-link text-black" id="seguranca-tab" data-bs-toggle="tab" data-bs-target="#seguranca-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Segurança</button>
         </li>
       </ul>
-      <a href="#" class="nav-link text-black"><i class="fa fa-cog"></i></a>
+      <button class="nav nav-link nav-pills d-flex align-items-center mb-md-0 me-md-auto text-black text-decoration-none border b-0" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa fa-cog"></i></button>
     </div>
   </main>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
