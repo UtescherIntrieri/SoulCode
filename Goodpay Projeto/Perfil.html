@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Goodpay</title>
+  <title>Perfil do usuário - Goodpay</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body style="overflow-y:hidden; height: 100vh;">
+<body>
   <header>
     <!-- NAVBAR - INICIO -->
     <nav class="navbar bg-body-tertiary fixed-top">
@@ -37,14 +37,6 @@
             </form>
             <!-- ACCORDION - INICIO -->
             <div class="accordion accordion-flush mt-4" id="accordionFlushExample">
-              <div class="accordion-item">
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-
-                  </div>
-                </div>
-              </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwo">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -81,8 +73,6 @@
                   </div>
                 </div>
               </div>
-              <a href="#" class="nav-link position-absolute bottom-0 end-4"><i class="fa fa-toggle-right"> Log Out</i></a>
-
             </div>
             <!-- ACCORDION - FIM -->
           </div>
@@ -92,39 +82,106 @@
     </nav>
     <!-- NAVBAR - FIM -->
   </header>
+  <div class="conteudo">
+    <section>
+      <div class="container py-5" style="margin-top: 8vh;">
 
-  <main class="container position-fixed p-0">
-    <!-- sidebar -->
-    <div class="d-flex flex-column p-3 fix-left border border-1 border-success border-start-0"
-      style="width: 280px; height: 88vh;">
-      <a href="/" class="d-flex align-items-center mb-md-0 me-md-auto text-black text-decoration-none">
-        <svg class="bi me-2" width="0" height="32"></svg>
-        <img src="./images/profile.png" alt="Profile picture" style="height: auto; width: 64px;">
-        <span class="fs-4 m-2">Nome</span>
-      </a>
-      <hr>
-      <ul class="nav nav-pills flex-column mb-auto" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link text-black" id="dadosPessoais-tab" data-bs-toggle="tab" data-bs-target="#dadosPessoais-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Dados Pessoais</button>
-        </li>
-        <li>
-          <button class="nav-link text-black" id="cartoes-tab" data-bs-toggle="tab" data-bs-target="#cartoes-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Cartões</button>
-        </li>
-        <li>
-          <button class="nav-link text-black" id="planos-tab" data-bs-toggle="tab" data-bs-target="#planos-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Planos</button>
-        </li>
-        <li>
-          <button class="nav-link text-black" id="seguranca-tab" data-bs-toggle="tab" data-bs-target="#seguranca-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Segurança</button>
-        </li>
-      </ul>
-      <button class="nav nav-link nav-pills d-flex align-items-center mb-md-0 me-md-auto text-black text-decoration-none border b-0" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa fa-cog"></i></button>
-    </div>
-  </main>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <script src="./scripts/main.js"></script>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body text-center">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                  class="rounded-circle img-fluid" style="width: 150px;">
+                <h5 class="my-3">José Almir</h5>
+                <p class="text-muted mb-1">Full Stack Developer</p>
+                <p class="text-muted mb-4">Professor de JavaScript</p>
+                <div class="d-flex justify-content-center mb-2">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-8" style="width: 55vw;">
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0"><i class="fa fa-address-card-o"></i> Nome Completo:</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0">José Almir</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Email:</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0">jose.almir@email.com</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Telefone:</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0">(88) 98816-4029</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Endereço de Cobrança:</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0">
+                      Rua: exemplo 
+                      <br>
+                      Número: 00 | Complemento: - 
+                      <br>
+                      Cidade Exemplo | Bairro: Exemplo
+                      <br>
+                      Estado: CE 
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Cartão GoodPay:</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0">
+                      Número: 0000 0000 0000 0000
+                      <br> 
+                      CVC: 000
+                      <br> 
+                      Validade: 00 / 00
+                      <br> 
+                      Bandeira: Mastercard - Gold
+                      <br> 
+                      Função: Débito e Crédito
+                      <br> 
+                      Ag: 0000-0      |      C/c: 000000-0
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
