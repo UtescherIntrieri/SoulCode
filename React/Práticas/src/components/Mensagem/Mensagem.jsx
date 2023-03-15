@@ -7,7 +7,7 @@ export function Mensagem() {
   return (
     <section className="mensagem">
       <h2 className="titulo">{textoTitulo.toUpperCase()}</h2>
-      <img src={linkImagem} alt=""/>
+      <img src={linkImagem} />
       <p className="paragrafo">
         Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as
         pessoas mais interessantis.Cevadis im ampola pa arma uma pindureta.Per

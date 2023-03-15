@@ -1,0 +1,9 @@
+.res {
+  border: 1px solid black;
+  margin: 8px auto;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: beige;
+  width: 30vw;
+  text-align: center; 
+}
