@@ -1,0 +1,27 @@
+.card-aluno {
+  border: 1px solid;
+  margin: 8px auto;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: beige;
+  width: 30vw;
+  min-width: 430px;
+  text-align: center; 
+}
+ul {
+  padding-left: 0px;
+}
+button {
+  margin: 8px auto;
+}
+p {
+  font-weight: bold;
+}
+mark.green{
+  color: green;
+  background: none;
+}
+mark.red{
+  color: red;
+  background: none;
+}
