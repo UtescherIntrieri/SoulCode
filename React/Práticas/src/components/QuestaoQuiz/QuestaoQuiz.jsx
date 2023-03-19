@@ -81,7 +81,7 @@ export function QuestaoQuiz() {
   if(statusQuiz==="pendente") {
     shuffle()
     return (
-      <div>
+      <div className="card">
         <h3>{question.enunciado}</h3>
         <ol type="A">
           {question.alternativas.map((alt) => (
@@ -94,7 +94,7 @@ export function QuestaoQuiz() {
     )
   } else if(statusQuiz==="acertou") {
     return (
-      <div>
+      <div className="card">
         <h3>Parabéns, você acertou!</h3>
         <p>Mostrou que manja!</p>
         <button onClick={acertou}>Continuar</button>
@@ -104,7 +104,7 @@ export function QuestaoQuiz() {
     contador += 1   
     if (contador<dif) {
       return (
-        <div>
+        <div className="card">
           <h3>Você errou!</h3>
           <p>Sinto muito!</p>
           <button onClick={errou}>Tentar novamente</button>
@@ -115,15 +115,16 @@ export function QuestaoQuiz() {
     }
   } else if(statusQuiz==="semtentativas") {
     return (
-      <div>
+      <div className="card">
         <h3>Acabaram suas tentativas</h3>
         <p>Sinto muito!</p>
+        <p>A pergunta n°{questionnum+1} foi difícil demais para você</p>
       <button onClick={reset}>Voltar ao inicio</button>
       </div>
     )
   } else if(statusQuiz==="menu") {
     return (
-      <div>
+      <div className="card">
         <h3>Escolha a dificuldade</h3>
         <button onClick={facil}>Fácil</button>
         <button onClick={medio}>Médio</button>
@@ -132,7 +133,7 @@ export function QuestaoQuiz() {
     )
   } else if(statusQuiz==="vitoria") {
     return (
-      <div>
+      <div className="card">
         <h3>Parabéns!!!</h3>
         <button onClick={reset}>Recomeçar</button>
       </div>

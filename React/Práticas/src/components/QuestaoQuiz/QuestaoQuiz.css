@@ -6,3 +6,16 @@
 .alternativa:hover {
   font-weight: bold;
 }
+.card {
+  border: 1px solid;
+  margin: 8px auto;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: beige;
+  width: 30vw;
+  min-width: 300px;
+  text-align: center; 
+}
+ul {
+  padding-left: 0px;
+}
