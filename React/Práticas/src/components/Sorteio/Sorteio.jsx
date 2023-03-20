@@ -12,7 +12,7 @@ export function Sorteio() {
   function newNum() {
     setNumero(Math.floor(Math.random()*100))
   }
-    if (numero%2==0) {
+    if (numero%2===0) {
       color = "green"
     } else {
       color = "red"
