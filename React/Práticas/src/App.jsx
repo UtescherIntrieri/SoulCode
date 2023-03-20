@@ -10,7 +10,10 @@
 // import { ListFruits } from "./components/ListFruits/ListFruits";
 // import { Sorteio } from "./components/Sorteio/Sorteio";
 // import { Abas } from "./components/Aba/Aba";
-import { QuestaoQuiz } from "./components/QuestaoQuiz/QuestaoQuiz";
+// import { QuestaoQuiz } from "./components/QuestaoQuiz/QuestaoQuiz";
+// import { IMC } from "./components/IMC/IMC";
+// import { Carrossel } from "./components/Carrossel/Carrossel";
+import { CadastroPessoas } from "./components/CadastroPessoas/CadastroPessoas";
 
 export function App() {
   return (
@@ -27,7 +30,10 @@ export function App() {
       {/* <ListFruits /> */}
       {/* <Sorteio /> */}
       {/* <Abas /> */}
-      <QuestaoQuiz />
+      {/* <QuestaoQuiz /> */}
+      {/* <IMC /> */}
+      {/* <Carrossel /> */}
+      <CadastroPessoas />
     </>
   );
 }
