@@ -13,7 +13,11 @@
 // import { QuestaoQuiz } from "./components/QuestaoQuiz/QuestaoQuiz";
 // import { IMC } from "./components/IMC/IMC";
 // import { Carrossel } from "./components/Carrossel/Carrossel";
-import { CadastroPessoas } from "./components/CadastroPessoas/CadastroPessoas";
+// import { CadastroPessoas } from "./components/CadastroPessoas/CadastroPessoas";
+// import { ConversorTemp } from "./components/ConversorTemp/ConversorTemp";
+// import { ConversorDist } from "./components/ConversorDist/ConversorDist";
+// import { Dicionario } from "./components/Dicionario/Dicionario";
+import { IMC2 } from "./components/IMC2/IMC2";
 
 export function App() {
   return (
@@ -33,7 +37,11 @@ export function App() {
       {/* <QuestaoQuiz /> */}
       {/* <IMC /> */}
       {/* <Carrossel /> */}
-      <CadastroPessoas />
+      {/* <CadastroPessoas /> */}
+      {/* <ConversorTemp /> */}
+      {/* <ConversorDist /> */}
+      {/* <Dicionario /> */}
+      <IMC2 />
     </>
   );
 }
