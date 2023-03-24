@@ -4,8 +4,8 @@ import "./Produtos.css"
 export function Produtos() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   function onSubmitProduto(data) {
-    alert (
-    `Produto Cadastrado!
+    alert(
+      `Produto Cadastrado!
     Marca: ${data.marca}
     
     Modelo: ${data.modelo}
@@ -22,9 +22,9 @@ export function Produtos() {
     `
     )
   }
-  
+
   return (
-<div className="pokemon">
+    <div className="produtos">
       <h1>Cadastro de Produtos</h1>
       <form onSubmit={handleSubmit(onSubmitProduto)}>
         <label htmlFor="marca">Marca</label><br />
@@ -44,21 +44,21 @@ export function Produtos() {
         {errors.problema && <span className="invalid">Campo Obrigatório!</span>}<br />
 
         <label htmlFor="entrada">Data de Entrada</label><br />
-        <input type="date" id="entrada" {...register("entrada", { required: true})} /><br />
+        <input type="date" id="entrada" {...register("entrada", { required: true })} /><br />
         {errors.entrada && <span className="invalid">Digite uma data válida!</span>}<br />
 
         <label htmlFor="entrega">Previsão de Entrega</label><br />
-        <input type="date" id="entrega" {...register("entrega", { required: true})} /><br />
+        <input type="date" id="entrega" {...register("entrega", { required: true })} /><br />
         {errors.entrega && <span className="invalid">Digite uma data válida!</span>}<br />
 
         <label htmlFor="status">Status</label><br />
-        <select name="status" id="status" {...register("status", { required: true,})}>
+        <select name="status" id="status" {...register("status", { required: true, })}>
           <option value="" disabled selected hidden />
           <option value="A Fazer">A Fazer</option>
           <option value="Fazendo">Fazendo</option>
           <option value="Pronto">Pronto</option>
           <option value="Entregue">Entregue</option>
-        </select>  <br />      
+        </select>  <br />
         {errors.status && <span className="invalid">Escolha um Status!</span>}<br /><br />
 
         <button type="submit">Cadastrar</button>
