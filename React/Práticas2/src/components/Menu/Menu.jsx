@@ -6,7 +6,6 @@ export function Menu() {
     <div className="menu">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Menu</Navbar.Brand>
           <Nav className="me-auto">
             <Button variant="link">
               <Link to="/">Home</Link>
@@ -25,6 +24,12 @@ export function Menu() {
             </Button>
             <Button variant="link">
               <Link to="/produtos">Produtos</Link>
+            </Button>
+            <Button variant="link">
+              <Link to="/pokemon">Pokémon</Link>
+            </Button>
+            <Button variant="link">
+              <Link to="/superheroi">Super-Herói</Link>
             </Button>
           </Nav>
         </Container>

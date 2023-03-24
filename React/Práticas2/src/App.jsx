@@ -10,6 +10,9 @@ import { Root } from './pages/Root/Root';
 import { Section, Section4 } from './components/Section/Section';
 import { EditaUsuario } from './pages/EditaUsuario/EditaUsuario';
 import { Perfil } from './pages/Perfil/Perfil';
+import { Pokemon } from './pages/Pokemon/Pokemon';
+import { SuperHeroi } from './pages/SuperHeroi/SuperHeroi';
+import { Produtos } from './pages/Produtos/Produtos';
 
 const sections = [
   {
@@ -44,6 +47,11 @@ export function App() {
             <Route path='/usuario/edit/:id' element={<EditaUsuario />}/>
             <Route path='/usuario/perfil/:id' element={<Perfil />}/>
             <Route path='/login' element={<Login />}/>
+            <Route path='/produtos' element={<Produtos />}/>
+            
+            <Route path='/pokemon' element={<Pokemon />}/>
+            <Route path='/superheroi' element={<SuperHeroi />}/>
+            
             <Route path='*' element={<NotFound />}/>
           </Route>
         </Routes>
