@@ -18,6 +18,12 @@ export function Menu() {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
+            <Nav.Link as={Link} to="/login">
+              Login
+            </Nav.Link>
+            <Nav.Link as={Link} to="/cadastro">
+              Cadastro
+            </Nav.Link>
             <Nav.Link onClick={() => alert("Saindo do sistema")}>
               <i className="bi bi-box-arrow-right"></i>
             </Nav.Link>
