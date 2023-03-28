@@ -1,20 +1,23 @@
 import { initializeApp } from "firebase/app";
-import {getAuth} from "firebase/auth"
-import {getFirestore} from "firebase/firestore"
-import {getStorage} from "firebase/storage"
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
+// Chaves de acesso ao firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyAQAkemHIEzJ1JK-70dCaG4onHH10SmvRI",
-  authDomain: "bibliotech-nai.firebaseapp.com",
-  projectId: "bibliotech-nai",
-  storageBucket: "bibliotech-nai.appspot.com",
-  messagingSenderId: "650664067450",
-  appId: "1:650664067450:web:4b57b17ebb1ac4396956c3"
+  apiKey: "AIzaSyCGV-hKd1DwX0wKcmlJV65SF1V2m1Bo9eY",
+  authDomain: "bibliotech-aulas-241dd.firebaseapp.com",
+  projectId: "bibliotech-aulas-241dd",
+  storageBucket: "bibliotech-aulas-241dd.appspot.com",
+  messagingSenderId: "455282911729",
+  appId: "1:455282911729:web:37e3cca50849ce62b73c50",
 };
 
-// Initialize Firebase
+// Inicializa o app com base nas configurações acima
 export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app)
-export const db = getFirestore(app)
-export const storage = getStorage(app)
+// Configurando o Authentication e seus recursos login/cadastro
+export const auth = getAuth(app);
+// Configura o Firestore e seus recursos de banco de dados
+export const db = getFirestore(app);
+// Configura o Storage e seus recursos de Upload
+export const storage = getStorage(app);

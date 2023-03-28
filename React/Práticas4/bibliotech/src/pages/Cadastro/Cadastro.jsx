@@ -1,10 +1,11 @@
 import { Button, Container, Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
-import {useForm} from "react-hook-form"
+import { Link } from "react-router-dom";
 import logoIcon from "../../assets/icons/livros.png";
 import googleIcon from "../../assets/icons/google-white.svg";
+import { useForm } from "react-hook-form";
 import { cadastrarEmailSenha, loginGoogle } from "../../firebase/auth";
 import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 export function Cadastro() {
   const {
@@ -12,33 +13,46 @@ export function Cadastro() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  
-  const navigate = useNavigate()
-  
+
+  const navigate = useNavigate();
+
   function onSubmit(data) {
-    const { email,senha } = data
-    cadastrarEmailSenha(email, senha).then((user) => {
-      console.log(user);
-    })
-    navigate("/")
+    const { email, senha } = data;
+    cadastrarEmailSenha(email, senha)
+      .then((user) => {
+        toast.success(`Bem-vindo(a) ${user.email}`, {
+          position: "bottom-right",
+          duration: 2500,
+        });
+        navigate("/");
+      })
+      .catch((erro) => {
+        toast.error(`Um erro aconteceu. Código: ${erro.code}`, {
+          position: "bottom-right",
+          duration: 2500,
+        });
+      });
   }
-  
+
   function onLoginGoogle() {
-    loginGoogle().then((user) => {
-      toast.success(`Bem-Vindo(a) ${user.email}`, {
-        position: "bottom-right",
-        duration: 2500
-      })  
-      navigate("/")
-    })
-    .catch((erro) => {
-      toast.error(`Um erro aconteceu. Cód: ${erro.code}`, {
-        position: "bottom-right",
-        duration: 2500
-      })    
-    })
+    // then = quando der certo o processo
+    loginGoogle()
+      .then((user) => {
+        toast.success(`Bem-vindo(a) ${user.email}`, {
+          position: "bottom-right",
+          duration: 2500,
+        });
+        navigate("/");
+      })
+      .catch((erro) => {
+        // tratamento de erro
+        toast.error(`Um erro aconteceu. Código: ${erro.code}`, {
+          position: "bottom-right",
+          duration: 2500,
+        });
+      });
   }
-  
+
   return (
     <Container fluid className="my-5">
       <p className="text-center">
@@ -53,14 +67,14 @@ export function Cadastro() {
         <img src={googleIcon} width="32" alt="Logo do google" />
         Entrar com o Google
       </Button>
-      <Form  onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
-          type="email"
-          className={errors.email ? "is-invalid":""}
-          placeholder="Seu email" 
-          {...register("email", {required: "O email é obrigatório"})}
+            type="email"
+            className={errors.email && "is-invalid"}
+            placeholder="Seu email"
+            {...register("email", { required: "O email é obrigatório" })}
           />
           <Form.Text className="invalid-feedback">
             {errors.email?.message}
@@ -69,14 +83,14 @@ export function Cadastro() {
         <Form.Group className="mb-3" controlId="password">
           <Form.Label>Senha</Form.Label>
           <Form.Control
-          type="password"
-          placeholder="Sua senha"
-          className={errors.senha ? "is-invalid":""}
-          {...register("senha", {required: "A senha é obrigatória"})}
+            type="password"
+            className={errors.senha && "is-invalid"}
+            placeholder="Sua senha"
+            {...register("senha", { required: "A senha é obrigatória" })}
           />
           <Form.Text className="invalid-feedback">
-          {errors.senha?.message}
-        </Form.Text>
+            {errors.senha?.message}
+          </Form.Text>
         </Form.Group>
         <Button type="submit" variant="success">
           Cadastrar

@@ -1,11 +1,12 @@
+import { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import googleIcon from "../../assets/icons/google-white.svg";
 import loginImg from "../../assets/images/login.png";
-import { loginEmailSenha, loginGoogle } from "../../firebase/auth";
-
+import { AuthContext } from "../../contexts/AuthContext";
+import { loginGoogle, loginEmailSenha } from "../../firebase/auth";
 
 export function Login() {
   const {
@@ -17,37 +18,46 @@ export function Login() {
   const navigate = useNavigate();
 
   function onSubmit(data) {
-    const {email, senha} = data
-    loginEmailSenha(email, senha).then((user) => {
-      toast.success(`Bem-Vindo(a) de volta ${user.email}`, {
-        position: "bottom-right",
-        duration: 2500
+    const { email, senha } = data;
+    loginEmailSenha(email, senha)
+      .then((user) => {
+        toast.success(`Entrando como ${user.email}`, {
+          position: "bottom-right",
+          duration: 2500,
+        });
+        navigate("/");
       })
-      navigate("/")
-    })
-    .catch((erro) => {
-      toast.error(`Um erro aconteceu. Cód: ${erro.code}`, {
-        position: "bottom-right",
-        duration: 2500
-      })    
-    })
+      .catch((erro) => {
+        toast.error(`Um erro aconteceu. Código: ${erro.code}`, {
+          position: "bottom-right",
+          duration: 2500,
+        });
+      });
   }
 
   function onLoginGoogle() {
-  loginGoogle().then((user) => { 
-    toast.success(`Bem-Vindo(a) ${user.email}`, {
-      position: "bottom-right",
-      duration: 2500
-    })
-    navigate("/")
-  })
-  .catch((erro => {
-    toast.error(`Um erro aconteceu. Cód: ${erro.code}`, {
-      position: "bottom-right",
-      duration: 2500
-    })
-  }))
-}
+    loginGoogle()
+      .then((user) => {
+        toast.success(`Bem-vindo(a) ${user.email}`, {
+          position: "bottom-right",
+          duration: 2500,
+        });
+        navigate("/");
+      })
+      .catch((erro) => {
+        toast.error(`Um erro aconteceu. Código: ${erro.code}`, {
+          position: "bottom-right",
+          duration: 2500,
+        });
+      });
+  }
+
+  const usuarioLogado = useContext(AuthContext);
+
+  // Se tiver dados no objeto, está logado
+  if (usuarioLogado !== null) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <Container fluid className="my-5">
@@ -59,11 +69,7 @@ export function Login() {
         Não tem conta? <Link to="/cadastro">Cadastre-se</Link>
       </p>
       <hr />
-      <Button
-        className="mb-3"
-        variant="danger"
-        onClick={onLoginGoogle}
-      >
+      <Button className="mb-3" variant="danger" onClick={onLoginGoogle}>
         <img src={googleIcon} width="32" alt="Google icon" /> Entrar com o
         Google
       </Button>
