@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 import { getLivro, updateLivro } from "../../firebase/livros";
 
-export function EditarLivros() {
+export function EditarLivro() {
 
   const { id } = useParams();
 
