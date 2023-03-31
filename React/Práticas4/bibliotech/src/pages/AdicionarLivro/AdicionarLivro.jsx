@@ -1,14 +1,34 @@
 import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { addLivro } from "../../firebase/livros";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { addLivro, uploadCapaLivro } from "../../firebase/livros";
 
 export function AdicionarLivro() {
 
-    const {register, handleSubmit, formState: {errors}} = useForm();
-
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    
     function onSubmit(data) {
-        addLivro(data)
-    }
+      const imagem = data.imagem[0];
+      if (imagem) {
+          const toastId = toast.loading("Upload da imagem...", { position: "top-right" });
+          uploadCapaLivro(imagem).then(url => {
+              toast.dismiss(toastId);
+              data.urlCapa = url;
+              delete data.imagem;
+              addLivro(data).then(() => {
+                  toast.success("Livro adicionado com sucesso!", { duration: 2000, position: "bottom-right" })
+                  navigate("/livros");
+              })
+          })
+      }
+      else {
+          delete data.imagem;
+          addLivro(data).then(() => {
+              toast.success("Livro adicionado com sucesso!", { duration: 2000, position: "bottom-right" })
+              navigate("/livros");
+          })
+      }    }
 
     return (
         <div className="adicionar-livro">
