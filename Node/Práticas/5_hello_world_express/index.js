@@ -133,9 +133,9 @@ app.get("/usuarios/email/:email", (req, res) => {
 // Exercício II: Crie uma rota "/usuarios/novo", e por meio dos parâmetros de consulta colete nome e email para inserir no array de usuários.
 app.get("/usuarios/novo", (req, res) => {
   const {nome, email} = req.query
-const novoUsuario = {nome: nome, email: email}
-usuarios.push(novoUsuario)
-res.status(201).json({message: "Usuário adicionado"})
+  const novoUsuario = {nome: nome, email: email}
+  usuarios.push(novoUsuario)
+  res.status(201).json({message: "Usuário adicionado"})
 })
 
 app.get("/usuarios/:index", (req, res) => {
