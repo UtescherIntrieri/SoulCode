@@ -16,7 +16,7 @@ function adicionar(req, res) {
   } else {
     res.status(400).send("Dados Faltando!")
   }
-  fs.writeFile("./db.json", JSON.stringify(alunos))
+  //fs.writeFile("./db.json", JSON.stringify(alunos))
 }
 
 function atualizar(req, res) {
@@ -25,7 +25,7 @@ function atualizar(req, res) {
   alunos[index].nome = nome
   alunos[index].media = media
   res.send(alunos)
-  fs.writeFile("./db.json", JSON.stringify(alunos))
+  //fs.writeFile("./db.json", JSON.stringify(alunos))
 }
 
 function deletar(req, res) {
@@ -36,7 +36,7 @@ function deletar(req, res) {
   } else {
     res.status(404).send("Aluno não encontrado!")
   }
-  fs.writeFile("./db.json", JSON.stringify(alunos))
+  //fs.writeFile("./db.json", JSON.stringify(alunos))
 
 }
 //  { nome: "Caique", media: "10", matricula: "4" }
