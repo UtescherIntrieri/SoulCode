@@ -11,9 +11,9 @@
 
 const fs = require("fs")
 const express = require("express");
-const morgan = require('morgan');
+//const morgan = require('morgan');
 const app = express();
-app.use(morgan('tiny'));
+//app.use(morgan('tiny'));
 const alunos = require("./alunos");
 
 

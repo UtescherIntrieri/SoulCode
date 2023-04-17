@@ -1,10 +1,26 @@
 const fs = require("fs")
 
 const alunos = [
-  { nome: "Almir", media: "5", matricula: "1" },
-  { nome: "Gabriel", media: "8", matricula: "2" },
-  { nome: "Nai", media: "10", matricula: "3" },
-  { nome: "Caique", media: "10", matricula: "4" }
+  { 
+    nome: "Almir",
+    media: "5",
+    matricula: "1"
+  },
+  { 
+    nome: "Gabriel",
+    media: "8",
+    matricula: "2"
+  },
+  {
+    nome: "Nai",
+    media: "10",
+    matricula: "3"
+  },
+  {
+    nome: "Caique",
+    media: "10",
+    matricula: "4"
+  }
 ];
 
 function adicionar(req, res) {
@@ -16,7 +32,7 @@ function adicionar(req, res) {
   } else {
     res.status(400).send("Dados Faltando!")
   }
-  //fs.writeFile("./db.json", JSON.stringify(alunos))
+  fs.writeFile('./db.json', JSON.stringify(alunos))
 }
 
 function atualizar(req, res) {
@@ -25,7 +41,7 @@ function atualizar(req, res) {
   alunos[index].nome = nome
   alunos[index].media = media
   res.send(alunos)
-  //fs.writeFile("./db.json", JSON.stringify(alunos))
+  fs.writeFile('./db.json', JSON.stringify(alunos))
 }
 
 function deletar(req, res) {
@@ -36,12 +52,8 @@ function deletar(req, res) {
   } else {
     res.status(404).send("Aluno não encontrado!")
   }
-  //fs.writeFile("./db.json", JSON.stringify(alunos))
+  fs.writeFile('./db.json', JSON.stringify(alunos))
 
 }
-//  { nome: "Caique", media: "10", matricula: "4" }
-// function procurar(nome) {
-//   alunos.find((el) => el.nome === nome)
-// }
-// module.exports = procurar()
+
 module.exports = { alunos, atualizar, adicionar, deletar };
