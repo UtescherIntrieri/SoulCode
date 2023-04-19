@@ -18,7 +18,7 @@ const Cliente = connection.define("cliente", {
 })
 
 const Endereco = require("./endereco")
-Cliente.hasOne(Endereco)
+Cliente.hasOne(Endereco,  {onDelete: "CASCADE"})
 Endereco.belongsTo(Cliente)
 
 module.exports = Cliente
