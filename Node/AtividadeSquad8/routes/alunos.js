@@ -20,7 +20,7 @@
  *         email:
  *           type: string
  *           description: O email do aluno
- *           format: isEmail
+ *           format: Email
  *         telefone:
  *           type: string
  *           description: O telefone do aluno
