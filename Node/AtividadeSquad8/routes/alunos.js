@@ -17,7 +17,6 @@
  *         nome:
  *           type: string
  *           description: O nome do aluno
- *           format: isAlpha
  *         email:
  *           type: string
  *           description: O email do aluno
