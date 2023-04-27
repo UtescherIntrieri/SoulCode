@@ -1,29 +1,38 @@
 import axios from "axios";
+import { useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-export function NovoCliente() {
-
-  const { register, handleSubmit, formState: { errors } } = useForm();
+export function EditarCliente() {
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const navigate = useNavigate();
-
+  const { id } = useParams()
+  
   function onSubmit(data) {
-    axios.post("http://localhost:3001/clientes", data)
+    axios.put(`http://localhost:3001/clientes/${id}`, data)
       .then(response => {
-        toast.success("Cliente adicionado.", { position: "bottom-right", duration: 2000 });
+        toast.success("Cliente editado.", { position: "bottom-right", duration: 2000 });
         navigate("/clientes");
       })
       .catch(error => {
         toast.error("Algo deu errado.", { position: "bottom-right", duration: 2000 });
         console.log(error);
       });
-  }
-
+  }  
+  
+  useEffect(() => {
+    axios.get(`http://localhost:3001/clientes/${id}`)
+    .then(response => {
+      const { nome, email, telefone, endereco: { cidade, uf, cep, rua, numero}} = response.data
+      reset({ nome, email, telefone, endereco: { cidade, uf, cep, rua, numero}})
+    })
+  }, [id, reset])
+  
   return (
     <div className="container">
-      <h1>Novo Cliente</h1>
+      <h1>Editar Cliente</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3">
           <Form.Label>Nome</Form.Label>
@@ -74,7 +83,7 @@ export function NovoCliente() {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          Cadastrar
+          Salvar
         </Button>
       </Form>
     </div>
